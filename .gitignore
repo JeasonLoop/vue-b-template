@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# 忽略 .env 文件
+.env
+
+# 忽略 SSH 密钥
+id_rsa
+id_rsa.pub
+
+# 忽略日志文件
+*.log
