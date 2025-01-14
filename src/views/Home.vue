@@ -80,6 +80,8 @@
         >
           <h1>欢迎来到 B 端项目</h1>
           <p>这里是首页内容区域。</p>
+          <p>{{ message }}</p>
+          <a-button type="primary" @click="handleClick">增加</a-button>
         </div>
       </a-layout-content>
 
@@ -100,9 +102,18 @@ import {
   MenuUnfoldOutlined,
   MenuFoldOutlined,
 } from '@ant-design/icons-vue';
+import { useMainStore } from '@/store'
 
 const collapsed = ref(false);
 const selectedKeys = ref(['1']);
+const store = useMainStore();
+const message = ref(`计数器: ${store.counter}`);
+
+const handleClick = () => {
+  store.increment();
+  message.value = `计数器: ${store.counter}`;
+};
+
 </script>
 
 <style scoped>
