@@ -18,7 +18,7 @@ const routes = [
     name: 'About',
     component: About,
     meta: {
-      title: '关于我们',
+      title: '关于我',
       icon: 'InfoCircleOutlined',
     },
   },
